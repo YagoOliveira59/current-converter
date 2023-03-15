@@ -16,4 +16,5 @@ app.use("/v1/transactions", transactions);
 
 app.listen(config.port, () => {
   logger.info(`listening port ${config.port}`);
+  logger.info(`token ${config.token}`);
 });

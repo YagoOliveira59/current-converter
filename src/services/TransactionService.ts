@@ -67,6 +67,7 @@ export class TransactionService {
       validTransaction.currencyDestiny
     );
     const rate = updatedRate.rates[validTransaction.currencyDestiny];
+    console.log(rate)
     const amountDestiny = converter(validTransaction.amountOrigin, rate);
     const savedTransaction = await this.transactionRepository
       .create(validTransaction, rate, amountDestiny)
